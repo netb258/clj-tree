@@ -10,7 +10,7 @@
 (def angle-rotation (/ (Math/PI) 6))
 
 (def tree-height (/ HEIGHT 3)) ;; The bigger the value here, the taller the tree will be.
-(def branch-decrease 0.66) ;; Every subsequent bransh must be smaller than the previous one.
+(def branch-decrease 0.66) ;; Every subsequent branch must be smaller than the previous one.
 (def min-branch-size 2) ;; We cannot draw branches shorter than this.
 
 (defn setup []
