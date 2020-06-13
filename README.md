@@ -3,9 +3,9 @@ Fractal trees in Clojure.
 
 Uses the Quil graphics library.
 
-![Alt text](./screenshot.png1?raw=true "Title")
-![Alt text](./screenshot.png2?raw=true "Title")
-![Alt text](./screenshot.png3?raw=true "Title")
+![Alt text](./screenshot1.png?raw=true "Title")
+![Alt text](./screenshot2.png?raw=true "Title")
+![Alt text](./screenshot3.png?raw=true "Title")
 
 # Usage
 
