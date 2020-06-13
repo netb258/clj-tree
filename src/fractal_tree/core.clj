@@ -7,11 +7,11 @@
 (def HEIGHT 700)
 
 ;; This def significantly changes the shape of the tree. Play with it in the REPL.
-(def angle-rotation (/ (Math/PI) 6))
+(def ANGLE-ROTATION (/ (Math/PI) 6))
 
-(def tree-height (/ HEIGHT 3)) ;; The bigger the value here, the taller the tree will be.
-(def branch-decrease 0.66) ;; Every subsequent branch must be smaller than the previous one.
-(def min-branch-size 2) ;; We cannot draw branches shorter than this.
+(def TREE-HEIGHT (/ HEIGHT 3)) ;; The bigger the value here, the taller the tree will be.
+(def BRANCH-DECREASE 0.66) ;; Every subsequent branch must be smaller than the previous one.
+(def MIN-BRANCH-SIZE 2) ;; We cannot draw branches shorter than this.
 
 (defn setup []
   (q/frame-rate 30)
@@ -21,19 +21,19 @@
 (defn make-branch [length]
   (q/line 0 0 0 (- length))
   (q/translate 0 (- length))
-  (when (> length min-branch-size)
+  (when (> length MIN-BRANCH-SIZE)
     (q/push-matrix)
-    (q/rotate angle-rotation)
-    (make-branch (* length branch-decrease)) ;; Branch to the right.
+    (q/rotate ANGLE-ROTATION)
+    (make-branch (* length BRANCH-DECREASE)) ;; Branch to the right.
     (q/pop-matrix)
     (q/push-matrix)
-    (q/rotate (- angle-rotation))
-    (make-branch (* length branch-decrease)) ;; Branch to the left.
+    (q/rotate (- ANGLE-ROTATION))
+    (make-branch (* length BRANCH-DECREASE)) ;; Branch to the left.
     (q/pop-matrix)))
 
 (defn draw-state! []
   (q/translate (/ WIDTH 2) HEIGHT)
-  (make-branch tree-height))
+  (make-branch TREE-HEIGHT))
 
 (defn -main [& args]
   (q/defsketch fractal-tree
