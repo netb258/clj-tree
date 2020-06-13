@@ -19,7 +19,7 @@
   (q/stroke 255))
 
 (defn make-branch [length] ;; This function will generate the whole tree.
-  (q/line 0 0 0 (- length))
+  (q/line 0 0 0 (- length)) ;; Every branch will be a simple line.
   (q/translate 0 (- length))
   (when (> length MIN-BRANCH-SIZE)
     (q/push-matrix)
