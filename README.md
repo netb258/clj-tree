@@ -7,10 +7,14 @@ Uses the Quil graphics library.
 ![Alt text](./screenshot2.png?raw=true "Title")
 ![Alt text](./screenshot3.png?raw=true "Title")
 
-# Usage
+# Running
 
 
     $ lein run
+
+# Changing the tree
+
+Simply start up a REPL and play with ANGLE-ROTATION (core.clj line 10).
 
 ## License
 
